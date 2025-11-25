@@ -1,0 +1,3 @@
+- [mscrivo/MACTrackBarLib](https://github.com/mscrivo/MACTrackBarLib)
+  - ~~[Advanced TrackBar (Slider) Control with MAC Style (C# & VB.NET)](http://www.codeproject.com/Articles/14378/Advanced-TrackBar-Slider-Control-with-MAC-Style-C)~~
+  - [Advanced TrackBar (Slider) Control with MAC Style (C# & VB.NET)](https://www.codeproject.com/articles/Advanced-TrackBar-Slider-Control-with-MAC-Style-C-#comments-section)
