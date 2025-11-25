@@ -7,6 +7,8 @@ on:
       - dev
   pull_request:
     types: [ opened, ready_for_review, reopened, synchronize ]
+  release:
+    types: [ published ]
   workflow_dispatch:
 
 env:
