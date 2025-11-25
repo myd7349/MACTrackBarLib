@@ -1,0 +1,88 @@
+name: MACTrackBarLib
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    types: [ opened, ready_for_review, reopened, synchronize ]
+  workflow_dispatch:
+
+env:
+  DOTNET_VERSION: 8.0.x
+  # Disable the .NET logo in the console output.
+  DOTNET_NOLOGO: true
+  # Disable the .NET first time experience to skip caching NuGet packages and speed up the build.
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+  # Disable sending .NET CLI telemetry to Microsoft.
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+
+jobs:
+  build:
+    name: Build
+    permissions:
+      contents: read
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Install .NET SDK
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: |
+            6.x
+            8.x
+            9.x
+
+      - name: List installed .NET SDKs
+        run: dotnet --list-sdks
+
+      - name: Build
+        run: dotnet build MACTrackBarLib.sln -c Release
+
+      - name: Pack
+        run: dotnet pack MACTrackBarLib.sln -c Release
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v5
+        with:
+          name: nuget-packages
+          path: "**/*.*nupkg"
+
+  publish:
+    name: Publish
+    permissions:
+      contents: write
+    runs-on: windows-latest
+    needs: build
+    if: github.event_name == 'release'
+    steps:
+      - name: Install .NET SDK
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v6
+        with:
+          name: nuget-packages
+
+      - name: Push NuGet packages
+        run: |
+          dotnet nuget push **/*.nupkg --skip-duplicate --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          generate_release_notes: true
+          files: |
+            **/*.nupkg
+            **/*.snupkg
