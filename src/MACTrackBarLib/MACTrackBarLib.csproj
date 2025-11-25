@@ -23,7 +23,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>WinForms TrackBar Slider Control</PackageTags>
     <PackageReleaseNotes>https://github.com/myd7349/MACTrackBarLib/releases</PackageReleaseNotes>
-    <PackageLicenseExpression>CPOL-1.02</PackageLicenseExpression>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net40' ">
@@ -31,6 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\..\LICENSE.txt" Pack="True" PackagePath="$(PackageLicenseFile)" />
     <None Include="..\..\README.md" Pack="True" PackagePath="$(PackageReadmeFile)" />
   </ItemGroup>
 </Project>
