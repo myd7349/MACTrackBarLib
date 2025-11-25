@@ -1,5 +1,7 @@
 # MACTrackBarLib
 
+[![NuGet](https://img.shields.io/nuget/v/MACTrackBarLib.svg)](https://www.nuget.org/packages/MACTrackBarLib/) [![Downloads](https://img.shields.io/nuget/dt/MACTrackBarLib)](https://www.nuget.org/packages/MACTrackBarLib)
+
 Advanced TrackBar (Slider) control with MAC style for WinForms. Originally written by Nicol Nnhia.
 
 # References
