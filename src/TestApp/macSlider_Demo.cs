@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-using EConTech.Windows.MACUI;
+using XComponent.SliderBar;
 
 namespace TestApp
 {
@@ -100,14 +100,14 @@ namespace TestApp
 			this.macLabel5 = new System.Windows.Forms.Label();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.macPanel2 = new System.Windows.Forms.Panel();
-			this.macTrackBar2 = new EConTech.Windows.MACUI.MACTrackBar();
+			this.macTrackBar2 = new XComponent.SliderBar.MACTrackBar();
 			this.cboBorderStyle = new System.Windows.Forms.ComboBox();
 			this.macLabel4 = new System.Windows.Forms.Label();
 			this.macLabel2 = new System.Windows.Forms.Label();
 			this.macLabel1 = new System.Windows.Forms.Label();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
 			this.macPanel1 = new System.Windows.Forms.Panel();
-			this.macTrackBar1 = new EConTech.Windows.MACUI.MACTrackBar();
+			this.macTrackBar1 = new XComponent.SliderBar.MACTrackBar();
 			this.macLabel9 = new System.Windows.Forms.Label();
 			this.macLabel10 = new System.Windows.Forms.Label();
 			this.numTickHeight = new System.Windows.Forms.NumericUpDown();
@@ -150,7 +150,7 @@ namespace TestApp
 			this.macLabel8.BackColor = System.Drawing.Color.Transparent;
 			this.macLabel8.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.macLabel8.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.macLabel8.Location = new System.Drawing.Point(24, 196);
+			this.macLabel8.Location = new System.Drawing.Point(24, 180);
 			this.macLabel8.Name = "macLabel8";
 			this.macLabel8.Size = new System.Drawing.Size(96, 16);
 			this.macLabel8.TabIndex = 45;
@@ -162,7 +162,7 @@ namespace TestApp
 			this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.btnClose.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
 			this.btnClose.ForeColor = System.Drawing.Color.White;
-			this.btnClose.Location = new System.Drawing.Point(383, 464);
+			this.btnClose.Location = new System.Drawing.Point(388, 440);
 			this.btnClose.Name = "btnClose";
 			this.btnClose.Size = new System.Drawing.Size(96, 24);
 			this.btnClose.TabIndex = 21;
@@ -174,7 +174,7 @@ namespace TestApp
 			this.btnStop.BackColor = System.Drawing.Color.FromArgb(((System.Byte)(17)), ((System.Byte)(120)), ((System.Byte)(189)));
 			this.btnStop.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
 			this.btnStop.ForeColor = System.Drawing.Color.White;
-			this.btnStop.Location = new System.Drawing.Point(271, 464);
+			this.btnStop.Location = new System.Drawing.Point(276, 440);
 			this.btnStop.Name = "btnStop";
 			this.btnStop.Size = new System.Drawing.Size(96, 24);
 			this.btnStop.TabIndex = 20;
@@ -186,7 +186,7 @@ namespace TestApp
 			this.btnStart.BackColor = System.Drawing.Color.FromArgb(((System.Byte)(17)), ((System.Byte)(120)), ((System.Byte)(189)));
 			this.btnStart.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
 			this.btnStart.ForeColor = System.Drawing.Color.White;
-			this.btnStart.Location = new System.Drawing.Point(159, 464);
+			this.btnStart.Location = new System.Drawing.Point(164, 440);
 			this.btnStart.Name = "btnStart";
 			this.btnStart.Size = new System.Drawing.Size(96, 24);
 			this.btnStart.TabIndex = 19;
@@ -198,7 +198,7 @@ namespace TestApp
 			this.numTrackLineHeight.BackColor = System.Drawing.SystemColors.Window;
 			this.numTrackLineHeight.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.numTrackLineHeight.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.numTrackLineHeight.Location = new System.Drawing.Point(136, 368);
+			this.numTrackLineHeight.Location = new System.Drawing.Point(136, 333);
 			this.numTrackLineHeight.Name = "numTrackLineHeight";
 			this.numTrackLineHeight.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.numTrackLineHeight.Size = new System.Drawing.Size(112, 22);
@@ -210,9 +210,9 @@ namespace TestApp
 			this.macLabel7.BackColor = System.Drawing.Color.Transparent;
 			this.macLabel7.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.macLabel7.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.macLabel7.Location = new System.Drawing.Point(24, 368);
+			this.macLabel7.Location = new System.Drawing.Point(24, 336);
 			this.macLabel7.Name = "macLabel7";
-			this.macLabel7.Size = new System.Drawing.Size(96, 24);
+			this.macLabel7.Size = new System.Drawing.Size(96, 16);
 			this.macLabel7.TabIndex = 41;
 			this.macLabel7.Text = "Line Height";
 			// 
@@ -221,7 +221,7 @@ namespace TestApp
 			this.numMinimum.BackColor = System.Drawing.SystemColors.Window;
 			this.numMinimum.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.numMinimum.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.numMinimum.Location = new System.Drawing.Point(400, 225);
+			this.numMinimum.Location = new System.Drawing.Point(400, 215);
 			this.numMinimum.Name = "numMinimum";
 			this.numMinimum.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.numMinimum.Size = new System.Drawing.Size(112, 22);
@@ -233,7 +233,7 @@ namespace TestApp
 			this.numMaximum.BackColor = System.Drawing.SystemColors.Window;
 			this.numMaximum.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.numMaximum.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.numMaximum.Location = new System.Drawing.Point(400, 193);
+			this.numMaximum.Location = new System.Drawing.Point(400, 186);
 			this.numMaximum.Name = "numMaximum";
 			this.numMaximum.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.numMaximum.Size = new System.Drawing.Size(112, 22);
@@ -245,9 +245,9 @@ namespace TestApp
 			this.macLabel6.BackColor = System.Drawing.Color.Transparent;
 			this.macLabel6.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.macLabel6.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.macLabel6.Location = new System.Drawing.Point(288, 224);
+			this.macLabel6.Location = new System.Drawing.Point(288, 215);
 			this.macLabel6.Name = "macLabel6";
-			this.macLabel6.Size = new System.Drawing.Size(88, 24);
+			this.macLabel6.Size = new System.Drawing.Size(88, 16);
 			this.macLabel6.TabIndex = 40;
 			this.macLabel6.Text = "Minimum";
 			// 
@@ -256,7 +256,7 @@ namespace TestApp
 			this.numTickFrequency.BackColor = System.Drawing.SystemColors.Window;
 			this.numTickFrequency.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.numTickFrequency.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.numTickFrequency.Location = new System.Drawing.Point(400, 336);
+			this.numTickFrequency.Location = new System.Drawing.Point(400, 302);
 			this.numTickFrequency.Minimum = new System.Decimal(new int[] {
 																			 1,
 																			 0,
@@ -264,7 +264,7 @@ namespace TestApp
 																			 -2147483648});
 			this.numTickFrequency.Name = "numTickFrequency";
 			this.numTickFrequency.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.numTickFrequency.Size = new System.Drawing.Size(128, 22);
+			this.numTickFrequency.Size = new System.Drawing.Size(112, 22);
 			this.numTickFrequency.TabIndex = 10;
 			this.numTickFrequency.ValueChanged += new System.EventHandler(this.numTickFrequency_ValueChanged);
 			// 
@@ -273,9 +273,9 @@ namespace TestApp
 			this.macLabel5.BackColor = System.Drawing.Color.Transparent;
 			this.macLabel5.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.macLabel5.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.macLabel5.Location = new System.Drawing.Point(288, 192);
+			this.macLabel5.Location = new System.Drawing.Point(288, 186);
 			this.macLabel5.Name = "macLabel5";
-			this.macLabel5.Size = new System.Drawing.Size(88, 24);
+			this.macLabel5.Size = new System.Drawing.Size(88, 16);
 			this.macLabel5.TabIndex = 37;
 			this.macLabel5.Text = "Maximum";
 			// 
@@ -289,23 +289,22 @@ namespace TestApp
 			this.macPanel2.Controls.Add(this.macTrackBar2);
 			this.macPanel2.Location = new System.Drawing.Point(536, 103);
 			this.macPanel2.Name = "macPanel2";
-			this.macPanel2.Size = new System.Drawing.Size(96, 320);
+			this.macPanel2.Size = new System.Drawing.Size(104, 320);
 			this.macPanel2.TabIndex = 22;
 			// 
 			// macTrackBar2
 			// 
-			this.macTrackBar2.AutoSize = true;
 			this.macTrackBar2.BackColor = System.Drawing.Color.Transparent;
 			this.macTrackBar2.BorderColor = System.Drawing.SystemColors.ActiveBorder;
 			this.macTrackBar2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
 			this.macTrackBar2.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(123)), ((System.Byte)(125)), ((System.Byte)(123)));
 			this.macTrackBar2.IndentHeight = 6;
-			this.macTrackBar2.Location = new System.Drawing.Point(10, 32);
+			this.macTrackBar2.Location = new System.Drawing.Point(10, 24);
 			this.macTrackBar2.Maximum = 10;
 			this.macTrackBar2.Minimum = 0;
 			this.macTrackBar2.Name = "macTrackBar2";
 			this.macTrackBar2.Orientation = System.Windows.Forms.Orientation.Vertical;
-			this.macTrackBar2.Size = new System.Drawing.Size(77, 256);
+			this.macTrackBar2.Size = new System.Drawing.Size(77, 272);
 			this.macTrackBar2.TabIndex = 0;
 			this.macTrackBar2.TextTickStyle = System.Windows.Forms.TickStyle.Both;
 			this.macTrackBar2.TickColor = System.Drawing.Color.FromArgb(((System.Byte)(148)), ((System.Byte)(146)), ((System.Byte)(148)));
@@ -345,7 +344,7 @@ namespace TestApp
 																"SunkenOuter"});
 			this.cboBorderStyle.Location = new System.Drawing.Point(136, 128);
 			this.cboBorderStyle.Name = "cboBorderStyle";
-			this.cboBorderStyle.Size = new System.Drawing.Size(128, 21);
+			this.cboBorderStyle.Size = new System.Drawing.Size(112, 21);
 			this.cboBorderStyle.TabIndex = 1;
 			this.cboBorderStyle.SelectedIndexChanged += new System.EventHandler(this.cboBorderStyle_SelectedIndexChanged);
 			// 
@@ -354,7 +353,7 @@ namespace TestApp
 			this.macLabel4.BackColor = System.Drawing.Color.Transparent;
 			this.macLabel4.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.macLabel4.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.macLabel4.Location = new System.Drawing.Point(288, 336);
+			this.macLabel4.Location = new System.Drawing.Point(288, 302);
 			this.macLabel4.Name = "macLabel4";
 			this.macLabel4.Size = new System.Drawing.Size(120, 16);
 			this.macLabel4.TabIndex = 32;
@@ -365,7 +364,7 @@ namespace TestApp
 			this.macLabel2.BackColor = System.Drawing.Color.Transparent;
 			this.macLabel2.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.macLabel2.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.macLabel2.Location = new System.Drawing.Point(24, 196);
+			this.macLabel2.Location = new System.Drawing.Point(24, 206);
 			this.macLabel2.Name = "macLabel2";
 			this.macLabel2.Size = new System.Drawing.Size(104, 16);
 			this.macLabel2.TabIndex = 28;
@@ -376,9 +375,9 @@ namespace TestApp
 			this.macLabel1.BackColor = System.Drawing.Color.Transparent;
 			this.macLabel1.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.macLabel1.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.macLabel1.Location = new System.Drawing.Point(24, 126);
+			this.macLabel1.Location = new System.Drawing.Point(24, 128);
 			this.macLabel1.Name = "macLabel1";
-			this.macLabel1.Size = new System.Drawing.Size(96, 24);
+			this.macLabel1.Size = new System.Drawing.Size(96, 16);
 			this.macLabel1.TabIndex = 26;
 			this.macLabel1.Text = "Border Style";
 			// 
@@ -393,7 +392,6 @@ namespace TestApp
 			// 
 			// macTrackBar1
 			// 
-			this.macTrackBar1.AutoSize = true;
 			this.macTrackBar1.BackColor = System.Drawing.Color.Transparent;
 			this.macTrackBar1.BorderColor = System.Drawing.SystemColors.ActiveBorder;
 			this.macTrackBar1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
@@ -421,7 +419,7 @@ namespace TestApp
 			this.macLabel9.BackColor = System.Drawing.Color.Transparent;
 			this.macLabel9.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.macLabel9.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.macLabel9.Location = new System.Drawing.Point(24, 164);
+			this.macLabel9.Location = new System.Drawing.Point(24, 154);
 			this.macLabel9.Name = "macLabel9";
 			this.macLabel9.Size = new System.Drawing.Size(80, 16);
 			this.macLabel9.TabIndex = 45;
@@ -432,7 +430,7 @@ namespace TestApp
 			this.macLabel10.BackColor = System.Drawing.Color.Transparent;
 			this.macLabel10.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.macLabel10.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.macLabel10.Location = new System.Drawing.Point(24, 400);
+			this.macLabel10.Location = new System.Drawing.Point(24, 362);
 			this.macLabel10.Name = "macLabel10";
 			this.macLabel10.Size = new System.Drawing.Size(80, 16);
 			this.macLabel10.TabIndex = 45;
@@ -443,7 +441,7 @@ namespace TestApp
 			this.numTickHeight.BackColor = System.Drawing.SystemColors.Window;
 			this.numTickHeight.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.numTickHeight.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.numTickHeight.Location = new System.Drawing.Point(400, 304);
+			this.numTickHeight.Location = new System.Drawing.Point(400, 273);
 			this.numTickHeight.Minimum = new System.Decimal(new int[] {
 																		  1,
 																		  0,
@@ -460,7 +458,7 @@ namespace TestApp
 			this.macLabel11.BackColor = System.Drawing.Color.Transparent;
 			this.macLabel11.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.macLabel11.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.macLabel11.Location = new System.Drawing.Point(288, 304);
+			this.macLabel11.Location = new System.Drawing.Point(288, 273);
 			this.macLabel11.Name = "macLabel11";
 			this.macLabel11.Size = new System.Drawing.Size(104, 16);
 			this.macLabel11.TabIndex = 32;
@@ -471,9 +469,9 @@ namespace TestApp
 			this.macLabel12.BackColor = System.Drawing.Color.Transparent;
 			this.macLabel12.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.macLabel12.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.macLabel12.Location = new System.Drawing.Point(24, 264);
+			this.macLabel12.Location = new System.Drawing.Point(24, 258);
 			this.macLabel12.Name = "macLabel12";
-			this.macLabel12.Size = new System.Drawing.Size(96, 24);
+			this.macLabel12.Size = new System.Drawing.Size(96, 16);
 			this.macLabel12.TabIndex = 37;
 			this.macLabel12.Text = "Tracker Width";
 			// 
@@ -482,9 +480,9 @@ namespace TestApp
 			this.macLabel13.BackColor = System.Drawing.Color.Transparent;
 			this.macLabel13.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.macLabel13.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.macLabel13.Location = new System.Drawing.Point(24, 296);
+			this.macLabel13.Location = new System.Drawing.Point(24, 284);
 			this.macLabel13.Name = "macLabel13";
-			this.macLabel13.Size = new System.Drawing.Size(112, 24);
+			this.macLabel13.Size = new System.Drawing.Size(112, 16);
 			this.macLabel13.TabIndex = 40;
 			this.macLabel13.Text = "Tracker Height";
 			// 
@@ -493,7 +491,7 @@ namespace TestApp
 			this.numTrackerWidth.BackColor = System.Drawing.SystemColors.Window;
 			this.numTrackerWidth.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.numTrackerWidth.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.numTrackerWidth.Location = new System.Drawing.Point(136, 264);
+			this.numTrackerWidth.Location = new System.Drawing.Point(136, 244);
 			this.numTrackerWidth.Name = "numTrackerWidth";
 			this.numTrackerWidth.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.numTrackerWidth.Size = new System.Drawing.Size(112, 22);
@@ -505,7 +503,7 @@ namespace TestApp
 			this.numTrackerHeight.BackColor = System.Drawing.SystemColors.Window;
 			this.numTrackerHeight.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.numTrackerHeight.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.numTrackerHeight.Location = new System.Drawing.Point(136, 296);
+			this.numTrackerHeight.Location = new System.Drawing.Point(136, 274);
 			this.numTrackerHeight.Name = "numTrackerHeight";
 			this.numTrackerHeight.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.numTrackerHeight.Size = new System.Drawing.Size(112, 22);
@@ -517,7 +515,7 @@ namespace TestApp
 			this.macLabel14.BackColor = System.Drawing.Color.Transparent;
 			this.macLabel14.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.macLabel14.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.macLabel14.Location = new System.Drawing.Point(24, 336);
+			this.macLabel14.Location = new System.Drawing.Point(24, 310);
 			this.macLabel14.Name = "macLabel14";
 			this.macLabel14.Size = new System.Drawing.Size(104, 16);
 			this.macLabel14.TabIndex = 45;
@@ -528,9 +526,9 @@ namespace TestApp
 			this.macLabel15.BackColor = System.Drawing.Color.Transparent;
 			this.macLabel15.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.macLabel15.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.macLabel15.Location = new System.Drawing.Point(288, 126);
+			this.macLabel15.Location = new System.Drawing.Point(288, 128);
 			this.macLabel15.Name = "macLabel15";
-			this.macLabel15.Size = new System.Drawing.Size(96, 24);
+			this.macLabel15.Size = new System.Drawing.Size(96, 16);
 			this.macLabel15.TabIndex = 37;
 			this.macLabel15.Text = "Large Change";
 			// 
@@ -539,7 +537,7 @@ namespace TestApp
 			this.numLargeChange.BackColor = System.Drawing.SystemColors.Window;
 			this.numLargeChange.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.numLargeChange.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.numLargeChange.Location = new System.Drawing.Point(400, 127);
+			this.numLargeChange.Location = new System.Drawing.Point(400, 128);
 			this.numLargeChange.Name = "numLargeChange";
 			this.numLargeChange.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.numLargeChange.Size = new System.Drawing.Size(112, 22);
@@ -551,9 +549,9 @@ namespace TestApp
 			this.macLabel16.BackColor = System.Drawing.Color.Transparent;
 			this.macLabel16.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.macLabel16.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.macLabel16.Location = new System.Drawing.Point(288, 160);
+			this.macLabel16.Location = new System.Drawing.Point(288, 157);
 			this.macLabel16.Name = "macLabel16";
-			this.macLabel16.Size = new System.Drawing.Size(96, 24);
+			this.macLabel16.Size = new System.Drawing.Size(96, 16);
 			this.macLabel16.TabIndex = 37;
 			this.macLabel16.Text = "Small Change";
 			// 
@@ -562,7 +560,7 @@ namespace TestApp
 			this.numSmallChange.BackColor = System.Drawing.SystemColors.Window;
 			this.numSmallChange.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.numSmallChange.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.numSmallChange.Location = new System.Drawing.Point(400, 161);
+			this.numSmallChange.Location = new System.Drawing.Point(400, 157);
 			this.numSmallChange.Name = "numSmallChange";
 			this.numSmallChange.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.numSmallChange.Size = new System.Drawing.Size(112, 22);
@@ -574,9 +572,9 @@ namespace TestApp
 			this.macLabel17.BackColor = System.Drawing.Color.Transparent;
 			this.macLabel17.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.macLabel17.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.macLabel17.Location = new System.Drawing.Point(288, 264);
+			this.macLabel17.Location = new System.Drawing.Point(288, 244);
 			this.macLabel17.Name = "macLabel17";
-			this.macLabel17.Size = new System.Drawing.Size(88, 24);
+			this.macLabel17.Size = new System.Drawing.Size(88, 16);
 			this.macLabel17.TabIndex = 40;
 			this.macLabel17.Text = "Value";
 			// 
@@ -585,7 +583,7 @@ namespace TestApp
 			this.numValue.BackColor = System.Drawing.SystemColors.Window;
 			this.numValue.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.numValue.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.numValue.Location = new System.Drawing.Point(400, 265);
+			this.numValue.Location = new System.Drawing.Point(400, 244);
 			this.numValue.Name = "numValue";
 			this.numValue.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.numValue.Size = new System.Drawing.Size(112, 22);
@@ -597,9 +595,9 @@ namespace TestApp
 			this.btnForeColor.BackColor = System.Drawing.Color.FromArgb(((System.Byte)(17)), ((System.Byte)(120)), ((System.Byte)(189)));
 			this.btnForeColor.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
 			this.btnForeColor.ForeColor = System.Drawing.Color.White;
-			this.btnForeColor.Location = new System.Drawing.Point(136, 160);
+			this.btnForeColor.Location = new System.Drawing.Point(136, 157);
 			this.btnForeColor.Name = "btnForeColor";
-			this.btnForeColor.Size = new System.Drawing.Size(32, 24);
+			this.btnForeColor.Size = new System.Drawing.Size(56, 21);
 			this.btnForeColor.TabIndex = 2;
 			this.btnForeColor.Text = "...";
 			this.btnForeColor.Click += new System.EventHandler(this.btnForeColor_Click);
@@ -609,9 +607,9 @@ namespace TestApp
 			this.btnTrackerColor.BackColor = System.Drawing.Color.FromArgb(((System.Byte)(17)), ((System.Byte)(120)), ((System.Byte)(189)));
 			this.btnTrackerColor.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
 			this.btnTrackerColor.ForeColor = System.Drawing.Color.White;
-			this.btnTrackerColor.Location = new System.Drawing.Point(136, 224);
+			this.btnTrackerColor.Location = new System.Drawing.Point(136, 215);
 			this.btnTrackerColor.Name = "btnTrackerColor";
-			this.btnTrackerColor.Size = new System.Drawing.Size(32, 24);
+			this.btnTrackerColor.Size = new System.Drawing.Size(56, 21);
 			this.btnTrackerColor.TabIndex = 4;
 			this.btnTrackerColor.Text = "...";
 			this.btnTrackerColor.Click += new System.EventHandler(this.btnTrackerColor_Click);
@@ -621,9 +619,9 @@ namespace TestApp
 			this.btnTrackLineColor.BackColor = System.Drawing.Color.FromArgb(((System.Byte)(17)), ((System.Byte)(120)), ((System.Byte)(189)));
 			this.btnTrackLineColor.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
 			this.btnTrackLineColor.ForeColor = System.Drawing.Color.White;
-			this.btnTrackLineColor.Location = new System.Drawing.Point(136, 336);
+			this.btnTrackLineColor.Location = new System.Drawing.Point(136, 304);
 			this.btnTrackLineColor.Name = "btnTrackLineColor";
-			this.btnTrackLineColor.Size = new System.Drawing.Size(32, 24);
+			this.btnTrackLineColor.Size = new System.Drawing.Size(56, 21);
 			this.btnTrackLineColor.TabIndex = 7;
 			this.btnTrackLineColor.Text = "...";
 			this.btnTrackLineColor.Click += new System.EventHandler(this.btnTrackLineColor_Click);
@@ -633,9 +631,9 @@ namespace TestApp
 			this.btnTickColor.BackColor = System.Drawing.Color.FromArgb(((System.Byte)(17)), ((System.Byte)(120)), ((System.Byte)(189)));
 			this.btnTickColor.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
 			this.btnTickColor.ForeColor = System.Drawing.Color.White;
-			this.btnTickColor.Location = new System.Drawing.Point(136, 400);
+			this.btnTickColor.Location = new System.Drawing.Point(136, 363);
 			this.btnTickColor.Name = "btnTickColor";
-			this.btnTickColor.Size = new System.Drawing.Size(32, 24);
+			this.btnTickColor.Size = new System.Drawing.Size(56, 21);
 			this.btnTickColor.TabIndex = 9;
 			this.btnTickColor.Text = "...";
 			this.btnTickColor.Click += new System.EventHandler(this.btnTickColor_Click);
@@ -653,9 +651,9 @@ namespace TestApp
 																  "TopLeft",
 																  "BottomRight",
 																  "Both"});
-			this.cboTextTickStyle.Location = new System.Drawing.Point(136, 194);
+			this.cboTextTickStyle.Location = new System.Drawing.Point(136, 186);
 			this.cboTextTickStyle.Name = "cboTextTickStyle";
-			this.cboTextTickStyle.Size = new System.Drawing.Size(128, 21);
+			this.cboTextTickStyle.Size = new System.Drawing.Size(112, 21);
 			this.cboTextTickStyle.TabIndex = 3;
 			this.cboTextTickStyle.SelectedIndexChanged += new System.EventHandler(this.cboTextTickStyle_SelectedIndexChanged);
 			// 
@@ -672,9 +670,9 @@ namespace TestApp
 															  "TopLeft",
 															  "BottomRight",
 															  "Both"});
-			this.cboTickStyle.Location = new System.Drawing.Point(400, 368);
+			this.cboTickStyle.Location = new System.Drawing.Point(400, 331);
 			this.cboTickStyle.Name = "cboTickStyle";
-			this.cboTickStyle.Size = new System.Drawing.Size(128, 21);
+			this.cboTickStyle.Size = new System.Drawing.Size(112, 21);
 			this.cboTickStyle.TabIndex = 11;
 			this.cboTickStyle.SelectedIndexChanged += new System.EventHandler(this.cboTickStyle_SelectedIndexChanged);
 			// 
@@ -683,7 +681,7 @@ namespace TestApp
 			this.macLabel3.BackColor = System.Drawing.Color.Transparent;
 			this.macLabel3.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.macLabel3.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.macLabel3.Location = new System.Drawing.Point(288, 368);
+			this.macLabel3.Location = new System.Drawing.Point(288, 331);
 			this.macLabel3.Name = "macLabel3";
 			this.macLabel3.Size = new System.Drawing.Size(120, 16);
 			this.macLabel3.TabIndex = 32;
@@ -694,7 +692,7 @@ namespace TestApp
 			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Verdana Ref", 9F, System.Drawing.FontStyle.Bold);
 			this.label1.ForeColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(89)), ((System.Byte)(90)));
-			this.label1.Location = new System.Drawing.Point(24, 228);
+			this.label1.Location = new System.Drawing.Point(24, 232);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(96, 16);
 			this.label1.TabIndex = 37;
@@ -702,10 +700,8 @@ namespace TestApp
 			// 
 			// macSlider_Demo
 			// 
-			this.AcceptButton = this.btnStart;
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-			this.CancelButton = this.btnClose;
-			this.ClientSize = new System.Drawing.Size(638, 540);
+			this.ClientSize = new System.Drawing.Size(648, 486);
 			this.Controls.Add(this.btnClose);
 			this.Controls.Add(this.btnStop);
 			this.Controls.Add(this.btnStart);

@@ -1,6 +1,6 @@
-#region Copyright (c) 2002-2006 EConTech JSC., All Rights Reserved
+#region Copyright (c) 2002-2006 X-Component, All Rights Reserved
 /* ---------------------------------------------------------------------*
-*                           EConTech JSC.,                              *
+*                           X-Component,                              *
 *              Copyright (c) 2002-2006 All Rights reserved              *
 *                                                                       *
 *                                                                       *
@@ -35,7 +35,7 @@
 * THIS COPYRIGHT NOTICE MAY NOT BE REMOVED FROM THIS FILE.              *
 * --------------------------------------------------------------------- *
 */
-#endregion Copyright (c) 2002-2006 EConTech JSC., All Rights Reserved
+#endregion Copyright (c) 2002-2006 X-Component, All Rights Reserved
 
 using System;
 using System.Collections;
@@ -46,7 +46,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
 
-namespace EConTech.Windows.MACUI.Designer
+namespace XComponent.SliderBar.Designer
 {
 	/// <summary>
 	/// The Designer for the <see cref="MACTrackBar"/>.

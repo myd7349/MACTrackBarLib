@@ -1,6 +1,6 @@
-#region Copyright (c) 2002-2006 EConTech JSC., All Rights Reserved
+#region Copyright (c) 2002-2006 X-Component, All Rights Reserved
 /* ---------------------------------------------------------------------*
-*                           EConTech JSC.,                              *
+*                           X-Component,                              *
 *              Copyright (c) 2002-2006 All Rights reserved              *
 *                                                                       *
 *                                                                       *
@@ -35,7 +35,7 @@
 * THIS COPYRIGHT NOTICE MAY NOT BE REMOVED FROM THIS FILE.              *
 * --------------------------------------------------------------------- *
 */
-#endregion Copyright (c) 2002-2006 EConTech JSC., All Rights Reserved
+#endregion Copyright (c) 2002-2006 X-Component, All Rights Reserved
 
 using System;
 using System.ComponentModel;
@@ -46,9 +46,9 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Text;
 using System.ComponentModel.Design.Serialization;
 
-using EConTech.Windows.MACUI.Designer;
+using XComponent.SliderBar.Designer;
 
-namespace EConTech.Windows.MACUI
+namespace XComponent.SliderBar
 {
 
 	#region Declaration
@@ -249,35 +249,24 @@ namespace EConTech.Windows.MACUI
 
 		#region Public Properties
 
-		/// <summary>
-		/// Gets or sets the height and width of the control.
-		/// </summary>
-		/// <remarks>You can see <see cref="Control.Size"/> for more detail.</remarks>
-		/// <value>The <see cref="Size"/> object that represents the height and width of the control in pixels.</value>
-		[Description("Gets or sets the height and width of the control.")]
-		[Category( "Layout")]
-		public new Size Size
+		protected override void OnSizeChanged(EventArgs e)
 		{
-			get
-			{
-				return base.Size;
-			}
-			set
+			base.OnSizeChanged (e);
+			if(this._autoSize)
 			{
 				// Calculate the Position for children controls
 				if(_orientation == Orientation.Horizontal)
-				{
-					this.Width = value.Width;
+				{					
 					this.Height = FitSize.Height;
 				}
 				else
 				{
-					this.Width = FitSize.Width;
-					this.Height = value.Height;
+					this.Width = FitSize.Width;				
 				}
 				//=================================================
 			}
 		}
+
 
 		/// <summary>
 		/// Gets or sets a value indicating whether the height or width of the track bar is being automatically sized.
@@ -286,7 +275,7 @@ namespace EConTech.Windows.MACUI
 		/// <value>true if the track bar is being automatically sized; otherwise, false. The default is true.</value>
 		[Category("Behavior")]
 		[Description("Gets or sets the height of track line.")]
-		[DefaultValue(4)]
+		[DefaultValue(true)]
 		public bool AutoSize
 		{
 			get { return _autoSize; }
@@ -680,6 +669,8 @@ namespace EConTech.Windows.MACUI
 				if (_minimum > _value)
 					_value = _minimum;
 
+				if(_autoSize == true)
+					this.Size = FitSize;
 				this.Invalidate();
 			}
 		}
@@ -706,6 +697,8 @@ namespace EConTech.Windows.MACUI
 				if (_maximum < _minimum)
 					_minimum = _maximum;
 
+				if(_autoSize == true)
+					this.Size = FitSize;
 				this.Invalidate();
 			}
 		}
@@ -1776,7 +1769,7 @@ namespace EConTech.Windows.MACUI
 				finally
 				{
 					oldValue = _value;
-					_value =_minimum + offsetValue;
+					Value =_minimum + offsetValue;
 					this.Invalidate();
 
 					if(oldValue != _value)
