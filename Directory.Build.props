@@ -1,0 +1,17 @@
+<Project>
+  <PropertyGroup>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Authors>Nicol Nnhia</Authors>
+    <Company>X-Component</Company>
+    <Copyright>Copyright © X-Component 2002-2006</Copyright>
+  </PropertyGroup>
+</Project>

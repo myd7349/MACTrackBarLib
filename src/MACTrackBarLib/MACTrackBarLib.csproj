@@ -1,8 +1,36 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFrameworks>net6.0-windows;net8.0-windows</TargetFrameworks>
+    <TargetFrameworks>net40;net6.0-windows;net8.0-windows</TargetFrameworks>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <!--
+  [Package authoring best practices](https://learn.microsoft.com/en-us/nuget/create-packages/package-authoring-best-practices)
+  -->
+  <PropertyGroup>
+    <PackageId>MACTrackBarLib</PackageId>
+    <Version>1.0.0.0</Version>
+    <Description>Advanced TrackBar (Slider) control with MAC style for WinForms.</Description>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageProjectUrl>https://github.com/myd7349/MACTrackBarLib</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>$(PackageProjectUrl)</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>WinForms TrackBar Slider Control</PackageTags>
+    <PackageReleaseNotes>https://github.com/myd7349/MACTrackBarLib/releases</PackageReleaseNotes>
+    <PackageLicenseExpression>CPOL-1.02</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net40' ">
+    <Reference Include="System.Design" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="True" PackagePath="$(PackageReadmeFile)" />
+  </ItemGroup>
 </Project>
