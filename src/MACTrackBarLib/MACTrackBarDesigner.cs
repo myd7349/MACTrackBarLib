@@ -53,6 +53,9 @@ namespace XComponent.SliderBar.Designer
 	/// </summary>
 	public class MACTrackBarDesigner : System.Windows.Forms.Design.ControlDesigner
 	{
+        /// <summary>
+        /// Constructs a new instance of MACTrackBarDesigner.
+        /// </summary>
 		public MACTrackBarDesigner()
 		{}
 

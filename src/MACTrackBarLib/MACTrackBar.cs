@@ -58,6 +58,9 @@ namespace XComponent.SliderBar
 	/// </summary>
 	public delegate void ValueChangedHandler(object sender, decimal value);
 
+    /// <summary>
+    /// Specifies the border style for a MACTrackBar control.
+    /// </summary>
 	public enum MACBorderStyle
 	{
 		/// <summary>
@@ -188,7 +191,7 @@ namespace XComponent.SliderBar
 		private Color _trackLineColor = SystemColors.Control;
 
 		private Color _trackerColor = SystemColors.Control;
-		public RectangleF _trackerRect = RectangleF.Empty;
+		private RectangleF _trackerRect = RectangleF.Empty;
 
 		private bool _autoSize = true;
 
@@ -245,11 +248,15 @@ namespace XComponent.SliderBar
 			this.Height = FitSize.Height;
 		}
 
-		#endregion
+        #endregion
 
-		#region Public Properties
+        #region Public Properties
 
-		protected override void OnSizeChanged(EventArgs e)
+        /// <summary>
+        /// Raises the SizeChanged event.
+        /// </summary>
+        /// <param name="e">An EventArgs that contains the event data.</param>
+        protected override void OnSizeChanged(EventArgs e)
 		{
 			base.OnSizeChanged (e);
 			if(this._autoSize)
@@ -1156,14 +1163,10 @@ namespace XComponent.SliderBar
 		{
 			bool blResult = true;
 
-			/// <summary>
-			/// Specified WM_KEYDOWN enumeration value.
-			/// </summary>
+			// Specified WM_KEYDOWN enumeration value.
 			const int WM_KEYDOWN = 0x0100;
 
-			/// <summary>
-			/// Specified WM_SYSKEYDOWN enumeration value.
-			/// </summary>
+			// Specified WM_SYSKEYDOWN enumeration value.
 			const int WM_SYSKEYDOWN = 0x0104;
 
 
