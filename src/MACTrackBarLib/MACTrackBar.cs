@@ -380,7 +380,10 @@ namespace XComponent.SliderBar
 		/// </summary>
 		[Category("Appearance")]
 		[Description("Gets or sets the tick's color of the control.")]
-		public Color TickColor
+        [Browsable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        [DefaultValue(typeof(Color), "Black")]
+        public Color TickColor
 		{
 			get { return _tickColor; }
 
@@ -517,7 +520,9 @@ namespace XComponent.SliderBar
 		/// <value>The <see cref="Size"/> object that represents the height and width of the tracker in pixels.</value>
 		[Category("Appearance")]
 		[Description("Gets or sets the tracker's size.")]
-		public Size TrackerSize
+        [Browsable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public Size TrackerSize
 		{
 			get { return _trackerSize; }
 
@@ -605,7 +610,9 @@ namespace XComponent.SliderBar
 		/// </value>
 		[Description( "Gets or set tracker's color.")]
 		[Category( "Appearance")]
-		public Color TrackerColor
+        [Browsable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public Color TrackerColor
 		{
 			get
 			{
@@ -629,7 +636,8 @@ namespace XComponent.SliderBar
 		/// The default value is 0.</value>
 		[Description( "The current value for the MACTrackBar, in the range specified by the Minimum and Maximum properties." )]
 		[Category( "Behavior")]
-		public int Value
+        [DefaultValue(0)]
+        public int Value
 		{
 			get
 			{
@@ -661,7 +669,8 @@ namespace XComponent.SliderBar
 		/// <value>The minimum value for the <see cref="MACTrackBar"/>. The default value is 0.</value>
 		[Description("The lower bound of the range this MACTrackBar is working with.")]
 		[Category( "Behavior")]
-		public int Minimum
+        [DefaultValue(0)]
+        public int Minimum
 		{
 			get
 			{
@@ -689,7 +698,8 @@ namespace XComponent.SliderBar
 		/// <value>The maximum value for the <see cref="MACTrackBar"/>. The default value is 10.</value>
 		[Description("The uppper bound of the range this MACTrackBar is working with.")]
 		[Category( "Behavior")]
-		public int Maximum
+        [DefaultValue(10)]
+        public int Maximum
 		{
 			get
 			{
@@ -787,7 +797,9 @@ namespace XComponent.SliderBar
 		/// <value>A <see cref="Color"/> object that represents the border color of the control.</value>
 		[Category("Appearance")]
 		[Description("Gets or sets the border color of the control.")]
-		public Color BorderColor
+        [Browsable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public Color BorderColor
 		{
 			get { return _borderColor; }
 			set 
@@ -806,7 +818,9 @@ namespace XComponent.SliderBar
 		/// <value>A <see cref="Color"/> object that represents the color of the track line.</value>
 		[Category("Appearance")]
 		[Description("Gets or sets the color of the track line.")]
-		public Color TrackLineColor
+        [Browsable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public Color TrackLineColor
 		{
 			get { return _trackLineColor; }
 			set 
