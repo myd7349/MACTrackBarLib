@@ -198,6 +198,8 @@ namespace XComponent.SliderBar
 		private bool leftButtonDown = false;
 		private float mouseStartPos = -1;
 
+        private bool _showFocusRectangle = true;
+
 		/// <summary>
 		/// Occurs when the property Value has been changed.
 		/// </summary>
@@ -833,15 +835,36 @@ namespace XComponent.SliderBar
 			}
 		}
 
+        /// <summary>
+        /// Gets or sets a value indicating whether the control should display focus rectangles.
+        /// </summary>
+        [Category("Appearance")]
+        [Description("Gets or sets a value indicating whether the control should display focus rectangles.")]
+        [Browsable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        [DefaultValue(true)]
+        public bool ShowFocusRectangle
+        {
+            get => _showFocusRectangle;
 
-		#endregion
+            set
+            {
+                if (_showFocusRectangle != value)
+                {
+                    _showFocusRectangle = value;
+                    Invalidate();
+                }
+            }
+        }
 
-		#region Private Properties
+        #endregion
 
-		/// <summary>
-		/// Gets the Size of area need for drawing.
-		/// </summary>
-		[Description("Gets the Size of area need for drawing.")]
+        #region Private Properties
+
+        /// <summary>
+        /// Gets the Size of area need for drawing.
+        /// </summary>
+        [Description("Gets the Size of area need for drawing.")]
 		[Browsable(false)]
 		private Size FitSize
 		{
@@ -1446,7 +1469,7 @@ namespace XComponent.SliderBar
 
 			// Draws a focus rectangle
 			//if(this.Focused && this.BackColor != Color.Transparent)
-			if(this.Focused)
+			if(this.Focused && ShowFocusRectangle)
 					ControlPaint.DrawFocusRectangle(e.Graphics, Rectangle.Inflate(this.ClientRectangle, -2, -2));
 			//==========================================================================
 		}
