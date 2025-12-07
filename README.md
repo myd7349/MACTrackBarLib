@@ -10,6 +10,7 @@ Advanced TrackBar (Slider) control with MAC style for WinForms. Originally writt
   - ~~[Advanced TrackBar (Slider) Control with MAC Style (C#)](http://www.codeguru.com/csharp/csharp/cs_controls/custom/article.php/c12101)~~ - [Internet Archive](https://web.archive.org/web/20120116142202/http://www.codeguru.com/csharp/csharp/cs_controls/custom/article.php/c12101)
 - ~~[Advanced TrackBar (Slider) Control with MAC Style (C# & VB.NET)](http://www.codeproject.com/Articles/14378/Advanced-TrackBar-Slider-Control-with-MAC-Style-C)~~
 - [Advanced TrackBar (Slider) Control with MAC Style (C# & VB.NET)](https://www.codeproject.com/articles/Advanced-TrackBar-Slider-Control-with-MAC-Style-C-#comments-section)
+- [Does C# WinForms have a slider control?](https://stackoverflow.com/questions/5750581/does-c-sharp-winforms-have-a-slider-control)
 
 # Other Forks
 
