@@ -311,6 +311,7 @@ namespace TestApp
 			this.macTrackBar2.TickHeight = 4;
 			this.macTrackBar2.TickStyle = System.Windows.Forms.TickStyle.Both;
 			this.macTrackBar2.TrackerColor = System.Drawing.Color.FromArgb(((System.Byte)(24)), ((System.Byte)(130)), ((System.Byte)(198)));
+			this.macTrackBar2.FilledTrackLineColor = SystemColors.ActiveCaption;
 			this.macTrackBar2.TrackerSize = new System.Drawing.Size(16, 16);
 			this.macTrackBar2.TrackLineColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(93)), ((System.Byte)(90)));
 			this.macTrackBar2.TrackLineHeight = 3;
@@ -408,6 +409,7 @@ namespace TestApp
 			this.macTrackBar1.TickHeight = 4;
 			this.macTrackBar1.TickStyle = System.Windows.Forms.TickStyle.Both;
 			this.macTrackBar1.TrackerColor = System.Drawing.Color.FromArgb(((System.Byte)(24)), ((System.Byte)(130)), ((System.Byte)(198)));
+			this.macTrackBar1.FilledTrackLineColor = SystemColors.ActiveCaption;
 			this.macTrackBar1.TrackerSize = new System.Drawing.Size(16, 16);
 			this.macTrackBar1.TrackLineColor = System.Drawing.Color.FromArgb(((System.Byte)(90)), ((System.Byte)(93)), ((System.Byte)(90)));
 			this.macTrackBar1.TrackLineHeight = 3;

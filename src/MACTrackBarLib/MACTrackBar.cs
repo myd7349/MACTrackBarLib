@@ -58,9 +58,9 @@ namespace XComponent.SliderBar
 	/// </summary>
 	public delegate void ValueChangedHandler(object sender, decimal value);
 
-    /// <summary>
-    /// Specifies the border style for a MACTrackBar control.
-    /// </summary>
+	/// <summary>
+	/// Specifies the border style for a MACTrackBar control.
+	/// </summary>
 	public enum MACBorderStyle
 	{
 		/// <summary>
@@ -188,6 +188,7 @@ namespace XComponent.SliderBar
 		private TickStyle _textTickStyle = TickStyle.BottomRight;
 
 		private int _trackLineHeight = 3;
+		private Color _filledTrackLineColor = SystemColors.Control;
 		private Color _trackLineColor = SystemColors.Control;
 
 		private Color _trackerColor = SystemColors.Control;
@@ -198,7 +199,7 @@ namespace XComponent.SliderBar
 		private bool leftButtonDown = false;
 		private float mouseStartPos = -1;
 
-        private bool _showFocusRectangle = true;
+		private bool _showFocusRectangle = true;
 
 		/// <summary>
 		/// Occurs when the property Value has been changed.
@@ -250,15 +251,15 @@ namespace XComponent.SliderBar
 			this.Height = FitSize.Height;
 		}
 
-        #endregion
+		#endregion
 
-        #region Public Properties
+		#region Public Properties
 
-        /// <summary>
-        /// Raises the SizeChanged event.
-        /// </summary>
-        /// <param name="e">An EventArgs that contains the event data.</param>
-        protected override void OnSizeChanged(EventArgs e)
+		/// <summary>
+		/// Raises the SizeChanged event.
+		/// </summary>
+		/// <param name="e">An EventArgs that contains the event data.</param>
+		protected override void OnSizeChanged(EventArgs e)
 		{
 			base.OnSizeChanged (e);
 			if(this._autoSize)
@@ -382,10 +383,10 @@ namespace XComponent.SliderBar
 		/// </summary>
 		[Category("Appearance")]
 		[Description("Gets or sets the tick's color of the control.")]
-        [Browsable(true)]
-        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
-        [DefaultValue(typeof(Color), "Black")]
-        public Color TickColor
+		[Browsable(true)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+		[DefaultValue(typeof(Color), "Black")]
+		public Color TickColor
 		{
 			get { return _tickColor; }
 
@@ -522,9 +523,9 @@ namespace XComponent.SliderBar
 		/// <value>The <see cref="Size"/> object that represents the height and width of the tracker in pixels.</value>
 		[Category("Appearance")]
 		[Description("Gets or sets the tracker's size.")]
-        [Browsable(true)]
-        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
-        public Size TrackerSize
+		[Browsable(true)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+		public Size TrackerSize
 		{
 			get { return _trackerSize; }
 
@@ -612,9 +613,9 @@ namespace XComponent.SliderBar
 		/// </value>
 		[Description( "Gets or set tracker's color.")]
 		[Category( "Appearance")]
-        [Browsable(true)]
-        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
-        public Color TrackerColor
+		[Browsable(true)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+		public Color TrackerColor
 		{
 			get
 			{
@@ -638,8 +639,8 @@ namespace XComponent.SliderBar
 		/// The default value is 0.</value>
 		[Description( "The current value for the MACTrackBar, in the range specified by the Minimum and Maximum properties." )]
 		[Category( "Behavior")]
-        [DefaultValue(0)]
-        public int Value
+		[DefaultValue(0)]
+		public int Value
 		{
 			get
 			{
@@ -671,8 +672,8 @@ namespace XComponent.SliderBar
 		/// <value>The minimum value for the <see cref="MACTrackBar"/>. The default value is 0.</value>
 		[Description("The lower bound of the range this MACTrackBar is working with.")]
 		[Category( "Behavior")]
-        [DefaultValue(0)]
-        public int Minimum
+		[DefaultValue(0)]
+		public int Minimum
 		{
 			get
 			{
@@ -700,8 +701,8 @@ namespace XComponent.SliderBar
 		/// <value>The maximum value for the <see cref="MACTrackBar"/>. The default value is 10.</value>
 		[Description("The uppper bound of the range this MACTrackBar is working with.")]
 		[Category( "Behavior")]
-        [DefaultValue(10)]
-        public int Maximum
+		[DefaultValue(10)]
+		public int Maximum
 		{
 			get
 			{
@@ -799,9 +800,9 @@ namespace XComponent.SliderBar
 		/// <value>A <see cref="Color"/> object that represents the border color of the control.</value>
 		[Category("Appearance")]
 		[Description("Gets or sets the border color of the control.")]
-        [Browsable(true)]
-        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
-        public Color BorderColor
+		[Browsable(true)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+		public Color BorderColor
 		{
 			get { return _borderColor; }
 			set 
@@ -815,14 +816,35 @@ namespace XComponent.SliderBar
 		}
 
 		/// <summary>
+		/// Gets or sets the color of the filled track line.
+		/// </summary>
+		/// <value>A <see cref="Color"/> object that represents the color of the filled track line.</value>
+		[Category("Appearance")]
+		[Description("Gets or sets the color of the track line.")]
+		[Browsable(true)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+		public Color FilledTrackLineColor
+		{
+			get { return _filledTrackLineColor; }
+			set
+			{
+				if (value != _filledTrackLineColor)
+				{
+					_filledTrackLineColor = value;
+					Invalidate();
+				}
+			}
+		}
+
+		/// <summary>
 		/// Gets or sets the color of the track line.
 		/// </summary>
 		/// <value>A <see cref="Color"/> object that represents the color of the track line.</value>
 		[Category("Appearance")]
 		[Description("Gets or sets the color of the track line.")]
-        [Browsable(true)]
-        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
-        public Color TrackLineColor
+		[Browsable(true)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+		public Color TrackLineColor
 		{
 			get { return _trackLineColor; }
 			set 
@@ -835,36 +857,36 @@ namespace XComponent.SliderBar
 			}
 		}
 
-        /// <summary>
-        /// Gets or sets a value indicating whether the control should display focus rectangles.
-        /// </summary>
-        [Category("Appearance")]
-        [Description("Gets or sets a value indicating whether the control should display focus rectangles.")]
-        [Browsable(true)]
-        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
-        [DefaultValue(true)]
-        public bool ShowFocusRectangle
-        {
-            get => _showFocusRectangle;
+		/// <summary>
+		/// Gets or sets a value indicating whether the control should display focus rectangles.
+		/// </summary>
+		[Category("Appearance")]
+		[Description("Gets or sets a value indicating whether the control should display focus rectangles.")]
+		[Browsable(true)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+		[DefaultValue(true)]
+		public bool ShowFocusRectangle
+		{
+			get => _showFocusRectangle;
 
-            set
-            {
-                if (_showFocusRectangle != value)
-                {
-                    _showFocusRectangle = value;
-                    Invalidate();
-                }
-            }
-        }
+			set
+			{
+				if (_showFocusRectangle != value)
+				{
+					_showFocusRectangle = value;
+					Invalidate();
+				}
+			}
+		}
 
-        #endregion
+		#endregion
 
-        #region Private Properties
+		#region Private Properties
 
-        /// <summary>
-        /// Gets the Size of area need for drawing.
-        /// </summary>
-        [Description("Gets the Size of area need for drawing.")]
+		/// <summary>
+		/// Gets the Size of area need for drawing.
+		/// </summary>
+		[Description("Gets the Size of area need for drawing.")]
 		[Browsable(false)]
 		private Size FitSize
 		{
@@ -1326,8 +1348,20 @@ namespace XComponent.SliderBar
 				//==========================================================================
 				// Draw the Track Line
 				//==========================================================================
-				drawRect = new RectangleF(workingRect.Left , currentUsedPos + _trackerSize.Height/2 - _trackLineHeight/2, workingRect.Width, _trackLineHeight);
-				DrawTrackLine(e.Graphics, drawRect);
+				if (_filledTrackLineColor == _trackLineColor || _value == _minimum)
+				{
+					drawRect = new RectangleF(workingRect.Left, currentUsedPos + _trackerSize.Height / 2 - _trackLineHeight / 2, workingRect.Width, _trackLineHeight);
+					DrawTrackLine(e.Graphics, drawRect, _trackLineColor);
+				}
+				else
+				{
+					drawRect = new RectangleF(workingRect.Left, currentUsedPos + _trackerSize.Height / 2 - _trackLineHeight / 2, currentTrackerPos - workingRect.Left, _trackLineHeight);
+					DrawTrackLine(e.Graphics, drawRect, _filledTrackLineColor);
+
+					drawRect = new RectangleF(currentTrackerPos, currentUsedPos + _trackerSize.Height / 2 - _trackLineHeight / 2, workingRect.Width - (currentTrackerPos - workingRect.Left), _trackLineHeight);
+					DrawTrackLine(e.Graphics, drawRect, _trackLineColor);
+				}
+
 				currentUsedPos += _trackerSize.Height;
 
 
@@ -1413,8 +1447,20 @@ namespace XComponent.SliderBar
 				//==========================================================================
 				// Draw the Track Line
 				//==========================================================================
-				drawRect = new RectangleF(currentUsedPos + _trackerSize.Height/2 - _trackLineHeight/2, workingRect.Top, _trackLineHeight, workingRect.Height);
-				DrawTrackLine(e.Graphics, drawRect);
+				if (_filledTrackLineColor == _trackLineColor || _value == _minimum)
+				{
+					drawRect = new RectangleF(currentUsedPos + _trackerSize.Height / 2 - _trackLineHeight / 2, workingRect.Top, _trackLineHeight, workingRect.Height);
+					DrawTrackLine(e.Graphics, drawRect, _trackLineColor);
+				}
+				else
+				{
+					drawRect = new RectangleF(currentUsedPos + _trackerSize.Height / 2 - _trackLineHeight / 2, workingRect.Height - currentTrackerPos, _trackLineHeight, currentTrackerPos);
+					DrawTrackLine(e.Graphics, drawRect, _filledTrackLineColor);
+
+					drawRect = new RectangleF(currentUsedPos + _trackerSize.Height / 2 - _trackLineHeight / 2, workingRect.Top, _trackLineHeight, workingRect.Height - currentTrackerPos);
+					DrawTrackLine(e.Graphics, drawRect, _trackLineColor);
+				}
+
 				currentUsedPos += _trackerSize.Height;
 				//==========================================================================
 
@@ -1479,9 +1525,10 @@ namespace XComponent.SliderBar
 		/// </summary>
 		/// <param name="g"></param>
 		/// <param name="drawRect"></param>
-		private void DrawTrackLine(Graphics g, RectangleF drawRect)
+		/// <param name="color"></param>
+		private void DrawTrackLine(Graphics g, RectangleF drawRect, Color color)
 		{
-			DrawMACStyleHelper.DrawAquaPillSingleLayer(g, drawRect,_trackLineColor,_orientation);
+			DrawMACStyleHelper.DrawAquaPillSingleLayer(g, drawRect, color, _orientation);
 		}
 
 		/// <summary>
