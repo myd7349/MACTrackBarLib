@@ -1317,7 +1317,8 @@ namespace XComponent.SliderBar
 					drawRect.Inflate(- _trackerSize.Width/2, 0);
 					currentUsedPos += textAreaSize;
 
-					DrawTickTextLine(e.Graphics, drawRect, _tickFrequency, _minimum, _maximum, this.ForeColor, this.Font, _orientation);
+					var color = Enabled ? this.ForeColor : SystemColors.GrayText;
+					DrawTickTextLine(e.Graphics, drawRect, _tickFrequency, _minimum, _maximum, color, this.Font, _orientation);
 					//==========================================================================
 				}
 
@@ -1330,7 +1331,8 @@ namespace XComponent.SliderBar
 					drawRect.Inflate(- _trackerSize.Width/2, 0);
 					currentUsedPos += _tickHeight + 1;
 
-					DrawTickLine(e.Graphics, drawRect, _tickFrequency, _minimum, _maximum, _tickColor, _orientation);
+					var color = Enabled ? _tickColor : SystemColors.GrayText;
+					DrawTickLine(e.Graphics, drawRect, _tickFrequency, _minimum, _maximum, color, _orientation);
 					//==========================================================================
 				}
 
@@ -1348,10 +1350,11 @@ namespace XComponent.SliderBar
 				//==========================================================================
 				// Draw the Track Line
 				//==========================================================================
-				if (_filledTrackLineColor == _trackLineColor || _value == _minimum)
+				if (_filledTrackLineColor == _trackLineColor || _value == _minimum || !Enabled)
 				{
+					var color = Enabled ? _trackLineColor : SystemColors.GrayText;
 					drawRect = new RectangleF(workingRect.Left, currentUsedPos + _trackerSize.Height / 2 - _trackLineHeight / 2, workingRect.Width, _trackLineHeight);
-					DrawTrackLine(e.Graphics, drawRect, _trackLineColor);
+					DrawTrackLine(e.Graphics, drawRect, color);
 				}
 				else
 				{
@@ -1377,7 +1380,8 @@ namespace XComponent.SliderBar
 					drawRect.Inflate(- _trackerSize.Width/2, 0);
 					currentUsedPos += _tickHeight;
 
-					DrawTickLine(e.Graphics, drawRect, _tickFrequency, _minimum, _maximum, _tickColor, _orientation);
+					var color = Enabled ? _tickColor : SystemColors.GrayText;
+					DrawTickLine(e.Graphics, drawRect, _tickFrequency, _minimum, _maximum, color, _orientation);
 					//==========================================================================
 				}
 
@@ -1391,7 +1395,8 @@ namespace XComponent.SliderBar
 					drawRect.Inflate(- _trackerSize.Width/2, 0);
 					currentUsedPos += textAreaSize;
 
-					DrawTickTextLine(e.Graphics, drawRect, _tickFrequency, _minimum, _maximum, this.ForeColor, this.Font, _orientation);
+					var color = Enabled ? this.ForeColor : SystemColors.GrayText;
+					DrawTickTextLine(e.Graphics, drawRect, _tickFrequency, _minimum, _maximum, color, this.Font, _orientation);
 					//==========================================================================
 				}
 			}
@@ -1413,7 +1418,8 @@ namespace XComponent.SliderBar
 					drawRect.Inflate(0, - _trackerSize.Width/2);
 					currentUsedPos += textAreaSize;
 
-					DrawTickTextLine(e.Graphics, drawRect, _tickFrequency, _minimum, _maximum, this.ForeColor, this.Font, _orientation);
+					var color = Enabled ? this.ForeColor : SystemColors.GrayText;
+					DrawTickTextLine(e.Graphics, drawRect, _tickFrequency, _minimum, _maximum, color, this.Font, _orientation);
 					//==========================================================================
 				}
 
@@ -1426,7 +1432,8 @@ namespace XComponent.SliderBar
 					drawRect.Inflate(0, - _trackerSize.Width/2);
 					currentUsedPos += _tickHeight + 1;
 
-					DrawTickLine(e.Graphics, drawRect, _tickFrequency, _minimum, _maximum, _tickColor, _orientation);
+					var color = Enabled ? _tickColor : SystemColors.GrayText;
+					DrawTickLine(e.Graphics, drawRect, _tickFrequency, _minimum, _maximum, color, _orientation);
 					//==========================================================================
 				}
 
@@ -1447,10 +1454,11 @@ namespace XComponent.SliderBar
 				//==========================================================================
 				// Draw the Track Line
 				//==========================================================================
-				if (_filledTrackLineColor == _trackLineColor || _value == _minimum)
+				if (_filledTrackLineColor == _trackLineColor || _value == _minimum || !Enabled)
 				{
+					var color = Enabled ? _trackLineColor : SystemColors.GrayText;
 					drawRect = new RectangleF(currentUsedPos + _trackerSize.Height / 2 - _trackLineHeight / 2, workingRect.Top, _trackLineHeight, workingRect.Height);
-					DrawTrackLine(e.Graphics, drawRect, _trackLineColor);
+					DrawTrackLine(e.Graphics, drawRect, color);
 				}
 				else
 				{
@@ -1474,7 +1482,8 @@ namespace XComponent.SliderBar
 					drawRect.Inflate(0, - _trackerSize.Width/2);
 					currentUsedPos += _tickHeight;
 
-					DrawTickLine(e.Graphics, drawRect, _tickFrequency, _minimum, _maximum, _tickColor, _orientation);
+					var color = Enabled ? _tickColor : SystemColors.GrayText;
+					DrawTickLine(e.Graphics, drawRect, _tickFrequency, _minimum, _maximum, color, _orientation);
 					//==========================================================================
 				}
 
@@ -1488,7 +1497,8 @@ namespace XComponent.SliderBar
 					drawRect.Inflate(0, - _trackerSize.Width/2);
 					currentUsedPos += textAreaSize;
 
-					DrawTickTextLine(e.Graphics, drawRect, _tickFrequency, _minimum, _maximum, this.ForeColor, this.Font, _orientation);
+					var color = Enabled ? this.ForeColor : SystemColors.GrayText;
+					DrawTickTextLine(e.Graphics, drawRect, _tickFrequency, _minimum, _maximum, color, this.Font, _orientation);
 					//==========================================================================
 				}
 			}
@@ -1538,7 +1548,8 @@ namespace XComponent.SliderBar
 		/// <param name="trackerRect"></param>
 		private void DrawTracker(Graphics g, RectangleF trackerRect)
 		{
-			DrawMACStyleHelper.DrawAquaPill(g, trackerRect,_trackerColor,_orientation);
+			var color = Enabled ? _trackerColor : SystemColors.GrayText;
+			DrawMACStyleHelper.DrawAquaPill(g, trackerRect, color, _orientation);
 		}
 
 		/// <summary>

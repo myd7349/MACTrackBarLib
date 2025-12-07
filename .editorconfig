@@ -43,6 +43,10 @@ indent_size = 2
 [*.{yml,yaml}]
 indent_size = 2
 
+# Source Files
+[*.cs]
+indent_style = tab
+
 # Markdown Files
 [*.{md,mdx}]
 trim_trailing_whitespace = false
