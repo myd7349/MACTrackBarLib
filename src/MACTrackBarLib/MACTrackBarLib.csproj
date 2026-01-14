@@ -14,7 +14,7 @@
   -->
   <PropertyGroup>
     <PackageId>MACTrackBarLib</PackageId>
-    <Version>1.1.0.0</Version>
+    <Version>1.1.1.0</Version>
     <Description>Advanced TrackBar (Slider) control with MAC style for WinForms.</Description>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
