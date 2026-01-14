@@ -1250,10 +1250,10 @@ namespace XComponent.SliderBar
 						break;
 
 					case Keys.Home:
-						Value = _maximum;
+						Value = _minimum;
 						break;
 					case Keys.End:
-						Value = _minimum;
+						Value = _maximum;
 						break;
 
 					default:
