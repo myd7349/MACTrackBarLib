@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/MACTrackBarLib/MACTrackBarLib.csproj" />
+  <Project Path="src/TestApp/TestApp.csproj" />
+</Solution>
